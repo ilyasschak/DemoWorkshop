@@ -53,7 +53,7 @@ jobs:
         uses: aws-actions/amazon-ecs-render-task-definition@v1
         with:
           task-definition: ilyass-test-1.json
-          container-name: demo_app
+          container-name: demo_app1
           image: $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG
 
       - name: Deploy to Amazon ECS
