@@ -54,7 +54,7 @@ jobs:
         with:
           task-definition: ilyass-test-1.json
           container-name: demo_app1 
-          image: $ECR_REGISTRY/$REPOSITORY:$IMAGE_TAG" >> $GITHUB_ENV
+          image: ${{ steps.build-image.outputs.image }}
 
       - name: Deploy to Amazon ECS
         uses: aws-actions/amazon-ecs-deploy-task-definition@v1
